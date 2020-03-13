@@ -115,11 +115,11 @@ router.put('/:id', validateUserId, (req, res) => {
 
 
 
-
 //custom middleware
 function validateUserId(req, res, next) {
   usersDb.getById(req.params.id)
   .then(user => {
+    console.log("validate user", user)
     if(user) {
       req.user = user;
     } else {
