@@ -40,6 +40,7 @@ function update(id, changes) {
     .update(changes);
 }
 
+
 function remove(id) {
   return db('users')
     .where('id', id)
